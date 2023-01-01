@@ -3,17 +3,28 @@
 </template>
 
 <script>
+import { getrepositoryapi } from "@/api/project/index.js";
 export default {
   components: {},
   name: "",
   props: [],
   data() {
-    return {};
+    return {
+      repositorylist: [],
+    };
   },
-  methods: {},
+  methods: {
+    //获取存储库列表
+    async getrepository() {
+      let { data: res } = await getrepositoryapi();
+      this.repositorylist = res;
+    },
+  },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    this.getrepository();
+  },
   mounted() {},
 };
 </script>

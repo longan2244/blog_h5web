@@ -4,8 +4,11 @@
     <Publictop></Publictop>
     <div class="routerbox" ref="routerbox">
       <keep-alive>
-        <router-view></router-view>
+        <!-- 需要缓存的视图组件 -->
+        <router-view v-if="$route.meta.keepAlive"> </router-view>
       </keep-alive>
+      <!-- 不需要缓存的视图组件 -->
+      <router-view v-if="!$route.meta.keepAlive"> </router-view>
     </div>
     <!-- 返回顶部 -->
     <div class="backToTop bgc" @click="backToTop" ref="backToTop">
@@ -34,6 +37,7 @@ export default {
   computed: {},
   watch: {},
   created() {},
+
   mounted() {
     evtbis.$on("returnpx", () => {
       this.scrollTops = this.$refs["routerbox"].scrollTop;
@@ -56,6 +60,7 @@ export default {
     overflow-y: auto;
   }
   .backToTop {
+    opacity: .95;
     position: absolute;
     bottom: 20px;
     right: 20px;

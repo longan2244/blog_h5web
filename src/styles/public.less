@@ -1,0 +1,90 @@
+/* 公共的css */
+// 代码
+.codebox-container {
+  min-height: 100px;
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+  padding: 14px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  margin: 32px 0;
+  box-shadow: 6px 5px 5px 5px rgba(225, 225, 225, 0.2);
+
+  .head {
+    width: 80px;
+    height: 14px;
+    display: flex;
+    margin-bottom: 12px;
+
+    li {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    li:nth-child(1) {
+      background: rgba(255, 95, 87, 1);
+    }
+
+    li:nth-child(2) {
+      background: rgba(254, 188, 46, 1);
+      margin: 0 8px;
+    }
+
+    li:nth-child(3) {
+      background: rgba(40, 200, 64, 1);
+    }
+  }
+}
+
+// 磁贴
+.promptbox-container {
+  padding: 11px 11px 11px 16px;
+  border-radius: 8px;
+  background: rgba(224, 234, 252, 1);
+  margin: 32px 0;
+  position: relative;
+
+  .textbox {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(166, 166, 166, 1);
+  }
+
+  .leftbox {
+    position: absolute;
+    height: 100%;
+    width: 8px;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 8px;
+    /* 左上角 */
+    border-bottom-left-radius: 8px;
+    /* 左下角 */
+  }
+}
+
+// 文章图片
+.imagebox-container {
+  border-radius: 8px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//连接
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+a:hover {
+  color: #00A0C6;
+  cursor: copy;
+}

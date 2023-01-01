@@ -4,7 +4,7 @@
       <img src="./../../../../public/img/$light_banner.svg" alt="" />
     </div>
     <!-- 分类 -->
-    <div class="classify">
+    <!-- <div class="classify">
       <ul>
         <li
           class="bgc"
@@ -16,36 +16,42 @@
           <span>{{ item.name }}</span>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- 搜索框 -->
     <div class="search">
       <i class="mdui-icon icon-search-outline"></i>
       <input type="text" class="tc" />
     </div>
+    <!-- van-tabs -->
+    <van-tabs v-model="active" lazy-render class="van-tabs">
+      <van-tab v-for="index in classify" :key="index.id" :title="index.name">
+        <Articleslist
+          :classid="index.id"
+          :classname="index.name"
+          ref="avlist"
+        ></Articleslist>
+      </van-tab>
+    </van-tabs>
     <!-- 文章列表 -->
-    <Articleslist :classid="defaultclassid" ref="avlist"></Articleslist>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Articleslist from "@/components/ArticlesList";
 import { getarticleclassapi } from "@/api/articles/index.js";
-
+import Footer from "@/components/Footer/index.vue";
 export default {
-  components: { Articleslist },
+  components: { Articleslist, Footer },
   name: "home",
   props: [],
   data() {
     return {
+      active: 4,
       classify: [],
-      defaultclassid: {
-        id: 1,
-        name: "vue",
-      }, //默认分类
     };
   },
   methods: {
-   
     async getarticleclass() {
       try {
         let { data: res } = await getarticleclassapi();
@@ -79,33 +85,38 @@ export default {
       vertical-align: middle;
     }
   }
-  .classify {
-    height: 79px;
-    padding: 21px 0;
-    ul {
-      display: flex;
-      height: 100%;
-      li {
-        flex: 1;
-        margin-right: 16px;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        color: white;
-        i {
-          padding-top: 8px;
-        }
-        i::before {
-          font-size: 16px;
-        }
-      }
-      li:last-child {
-        margin-right: 0px !important;
-      }
-    }
+  .van-tabs__wrap {
+    margin-bottom: 24px;
+    border-radius: 8px;
   }
+
+  // .classify {
+  //   height: 79px;
+  //   padding: 21px 0;
+  //   ul {
+  //     display: flex;
+  //     height: 100%;
+  //     li {
+  //       flex: 1;
+  //       margin-right: 16px;
+  //       border-radius: 8px;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       font-size: 16px;
+  //       color: white;
+  //       i {
+  //         padding-top: 8px;
+  //       }
+  //       i::before {
+  //         font-size: 16px;
+  //       }
+  //     }
+  //     li:last-child {
+  //       margin-right: 0px !important;
+  //     }
+  //   }
+  // }
   .search {
     height: 47px;
     margin-bottom: 27px;

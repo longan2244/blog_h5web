@@ -1,1 +1,74 @@
 /* 公共的css */
+.codebox-container {
+  min-height: 100px;
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+  padding: 14px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  margin: 32px 0;
+  box-shadow: 6px 5px 5px 5px rgba(225, 225, 225, 0.2);
+}
+.codebox-container .head {
+  width: 80px;
+  height: 14px;
+  display: flex;
+  margin-bottom: 12px;
+}
+.codebox-container .head li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.codebox-container .head li:nth-child(1) {
+  background: #ff5f57;
+}
+.codebox-container .head li:nth-child(2) {
+  background: #febc2e;
+  margin: 0 8px;
+}
+.codebox-container .head li:nth-child(3) {
+  background: #28c840;
+}
+.promptbox-container {
+  padding: 11px 11px 11px 16px;
+  border-radius: 8px;
+  background: #e0eafc;
+  margin: 32px 0;
+  position: relative;
+}
+.promptbox-container .textbox {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a6a6a6;
+}
+.promptbox-container .leftbox {
+  position: absolute;
+  height: 100%;
+  width: 8px;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 8px;
+  /* 左上角 */
+  border-bottom-left-radius: 8px;
+  /* 左下角 */
+}
+.imagebox-container {
+  border-radius: 8px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+.imagebox-container img {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a:hover {
+  color: #00A0C6;
+  cursor: copy;
+}

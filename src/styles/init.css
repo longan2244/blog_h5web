@@ -5,15 +5,32 @@
   box-sizing: border-box;
 }
 
+/* 夜间模式 */
 body {
   background: rgba(243, 247, 252, 1);
+  /* background: #263238; */
+  margin: 0 auto;
 }
 
+/* 文本颜色配置 */
 .tc {
   color: rgba(128, 128, 128, 1) !important;
 }
 
+/* 连接文本颜色配置 */
+.tc2 {
+  color: #00a0c6 !important;
+  /* color: #00c66a !important; */
+}
+
+/* 主题色配置 */
 .bgc {
+  background-color: #7fdcd5 !important;
+  /* background-color: #7fdc93 !important; */
+}
+
+/* vant tab栏颜色 */
+.van-tabs__line {
   background-color: #7fdcd5 !important;
 }
 
@@ -25,15 +42,14 @@ li {
   list-style: none;
 }
 
-a {
-  color: #212121;
-  text-decoration: none !important;
+center {
+  text-decoration: underline
 }
 
-a:hover {
-  color: #00A0C6;
-  text-decoration: none;
-  cursor: pointer;
+h1,
+h2 {
+  font-size: 24px;
+  color: black !important;
 }
 
 input {
@@ -47,4 +63,41 @@ input {
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 0px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+
+div::selection {
+  background: #282c34;
+  color: #7fdcd5;
+}
+
+span::selection {
+  background: #282c34;
+  color: #7fdcd5;
+}
+
+.banner {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 100px !important;
+  }
+
+  .banner {
+    margin: 0 auto;
+  }
+
+  .articlesitem-banner {
+    margin: 0 auto !important;
+  }
 }

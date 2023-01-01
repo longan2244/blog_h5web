@@ -1,10 +1,10 @@
-import baseURL from '@/util/baseimgurl.js'
+const baseURL ="https://api.github.com"
 import axios from "axios";
-const ajax = axios.create({
+const gitajax = axios.create({
   baseURL,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
   },
 })
 
-export default ajax
+export default gitajax

@@ -20,7 +20,10 @@
     </div>
     <div class="articlesitem-body">
       <!-- 缩略图 -->
-      <div class="articlesitem-banner">
+      <div
+        class="articlesitem-banner bgc"
+        v-if="!articlesitem.newimgurl.length == 0"
+      >
         <img class="mdui-img-fluid" :src="articlesitem.newimgurl[0]" alt="" />
       </div>
       <div class="articlesitem-content">
@@ -55,7 +58,7 @@ export default {
   created() {},
   mounted() {},
   activated() {
-       evtbus.$emit("setreturnpx");
+    evtbus.$emit("setreturnpx");
   },
 };
 </script>
@@ -63,6 +66,7 @@ export default {
 <style lang='less' scpoed>
 .articlesitem-container {
   padding: 11px 14px 12px 14px;
+
   margin-bottom: 24px;
   border-radius: 16px;
   box-shadow: 0px 7px 43px 0px rgba(0, 157, 165, 0.2);
@@ -87,31 +91,32 @@ export default {
       }
     }
     .classifys {
-      width: 62px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 16px;
+      padding: 1px 8px;
       color: white;
       border-radius: 4px;
       i {
-        padding-top: 8px;
+        padding:10px 4px 0 0;
       }
       i::before {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   }
   .articlesitem-body {
     .articlesitem-banner {
       margin: 12px 0px;
-      width: 311.5px;
+      width: 100%;
       height: 160px;
       opacity: 1;
       border-radius: 4px;
       overflow: hidden;
       img {
         height: 160px;
+        width: 100%;
       }
     }
     .articlesitem-content {
@@ -129,7 +134,7 @@ export default {
         color: rgba(128, 128, 128, 1);
       }
       .articlesitem-sendTime {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 400;
         letter-spacing: 0px;
         padding-top: 24px;
