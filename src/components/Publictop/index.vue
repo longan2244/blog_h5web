@@ -11,7 +11,7 @@
         <i class="mdui-icon icon-settings-outline"></i>
         <!-- github -->
        
-          <a href="https://vant-contrib.gitee.io/vant/v2/#/zh-CN/advanced-usage">
+          <a href="https://github.com/longan2244/blog_h5web">
            <i  class="mdui-icon icon-logo-github">  </i></a>
        
         <i

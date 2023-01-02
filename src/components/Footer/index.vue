@@ -1,6 +1,6 @@
 <template>
   <div class="footer-container">
-    <span class="tc">领取站点源码前往 <a class="tc2"> Github</a></span>
+    <span class="tc">领取站点源码前往 <a class="tc2" href="https://github.com/longan2244/blog_h5web"> Github</a></span>
     <div class="contactmelist">
       <i class="mdui-icon icon-logo-github" style="color: #1a1414"></i>
       <i class="mdui-icon icon-logo-twitter" style="color: #03a9f4"></i>

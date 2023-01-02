@@ -69,7 +69,7 @@ export default {
     //获取存储库列表
     async getrepository() {
       let { data: res } = await getrepositoryapi();
-      this.repositorylist = res.reverse();
+      this.repositorylist = res
     },
   },
   computed: {},
