@@ -38,7 +38,7 @@ const routes = [
   {
     path: '/send',
     name: 'send',
-    component: Send,
+    component: Send, 
   }
 
 ]
