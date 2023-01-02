@@ -11,6 +11,7 @@ import 'mdui/dist/css/mdui.min.css'//框架1
 import 'mdui/dist/js/mdui.min.js'
 import 'vant/lib/index.css';//vant
 import '@/styles/init.css'
+import '@/styles/media.css'
 Vue.use(Vant);
 Vue.config.productionTip = false
 

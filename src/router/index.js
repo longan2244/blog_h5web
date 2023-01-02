@@ -20,9 +20,16 @@ const routes = [
           keepAlive: true //需要被缓存
         }
       }, //主页
-      { path: "/projects", name: "projects", component: Projects },//项目页
-      { path: "/about", name: "about", component: About },//关于
-      { path: "/links", name: "links", component: Links },//友链
+
+      {
+        path: "/projects", name: "projects", component: Projects,
+      },//项目页
+      {
+        path: "/about", name: "about", component: About,
+      },//关于
+      {
+        path: "/links", name: "links", component: Links,
+      },//友链
       {
         path: '/article/:id', name: "", component: Article, props: true //具体文章
       }

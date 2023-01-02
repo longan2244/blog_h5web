@@ -36,7 +36,7 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+
 
   mounted() {
     evtbis.$on("returnpx", () => {
@@ -44,6 +44,9 @@ export default {
     });
     evtbis.$on("setreturnpx", () => {
       this.$refs["routerbox"].scrollTop = this.scrollTops;
+    });
+    evtbis.$on("setzero", () => {
+     this.backToTop()
     });
   },
 };
@@ -59,8 +62,11 @@ export default {
     bottom: 0;
     overflow-y: auto;
   }
+  .routerbox::-webkit-scrollbar {
+    display: none; /*隐藏滚轮*/
+  }
   .backToTop {
-    opacity: .95;
+    opacity: 0.95;
     position: absolute;
     bottom: 20px;
     right: 20px;

@@ -73,19 +73,23 @@ pre {
 
 
 
-div::selection {
+div::selection,
+span::selection,
+p::selection {
   background: #282c34;
   color: #7fdcd5;
 }
 
-span::selection {
-  background: #282c34;
-  color: #7fdcd5;
-}
+
 
 .banner {
   border-radius: 8px;
   overflow: hidden;
+}
+
+.banner img {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media screen and (min-width: 750px) {
@@ -93,11 +97,35 @@ span::selection {
     font-size: 100px !important;
   }
 
-  .banner {
-    margin: 0 auto;
+  .popup {
+    position: absolute;
+    left: 50%;
+    max-width: 560px;
+    transform: translate(-50%);
   }
 
-  .articlesitem-banner {
-    margin: 0 auto !important;
+  .routerbox {
+    max-width: 560px;
+    margin: 0 auto;
+
+    box-shadow: 1px 10px 40px 1px rgba(128, 128, 128, 0.2);
   }
+
+  .articlesitem-container {
+    box-shadow: none;
+  }
+
+  .banner {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .banner img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+
+
+
 }

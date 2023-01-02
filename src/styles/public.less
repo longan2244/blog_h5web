@@ -84,6 +84,30 @@ a {
   color: #212121;
 }
 
+//彩虹条
+.caihong {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  color: #000000b2;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.caihong::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 21px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #FF4AA8 0%, #F95D66 22%, #FE9C76 100%);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -10px;
+}
+
 a:hover {
   color: #00A0C6;
   cursor: copy;

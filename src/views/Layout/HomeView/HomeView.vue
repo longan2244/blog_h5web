@@ -3,20 +3,6 @@
     <div class="banner">
       <img src="./../../../../public/img/$light_banner.svg" alt="" />
     </div>
-    <!-- 分类 -->
-    <!-- <div class="classify">
-      <ul>
-        <li
-          class="bgc"
-          v-for="(item, index) in classify"
-          :key="index"
-          @click="defaultclassid = item"
-        >
-          <i class="mdui-icon icon-pricetags-outline"></i>
-          <span>{{ item.name }}</span>
-        </li>
-      </ul>
-    </div> -->
     <!-- 搜索框 -->
     <div class="search">
       <i class="mdui-icon icon-search-outline"></i>
@@ -33,6 +19,7 @@
       </van-tab>
     </van-tabs>
     <!-- 文章列表 -->
+    <!-- 页脚 -->
     <Footer></Footer>
   </div>
 </template>
@@ -74,12 +61,10 @@ export default {
   padding: 27px 17px 0px 17px;
   overflow: hidden;
   .banner {
-    height: 128.5px;
-    width: 345px;
     opacity: 1;
     border-radius: 8px;
     overflow: hidden;
-    padding-right: 16px;
+    padding-bottom: 24px;
     img {
       width: 100%;
       vertical-align: middle;
